@@ -157,21 +157,43 @@ footer img {
     right: 20px;
     background: #25D366;
     color: white;
-    padding: 15px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    font-size: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 35px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     z-index: 1000;
+    text-decoration: none;
 }
 
-
+/* Efeito de "pulsação" suave para chamar atenção */
 .whatsapp-button:hover {
     transform: scale(1.1);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Animação de pulsação automática */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(37, 211, 102, 0.5);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(37, 211, 102, 0.7);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(37, 211, 102, 0.5);
+    }
+}
+
+.whatsapp-button.pulsar {
+    animation: pulse 1.5s infinite;
 }
 
 /* ========================= */
