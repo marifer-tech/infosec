@@ -9,7 +9,7 @@
 /* Corpo da página */
 body {
     background-color: #fff;
-    color: white;
+    color: #333;
     text-align: center;
 }
 
@@ -23,14 +23,16 @@ body {
     position: relative;
 }
 
-.navbar img {
-    height: 50px;
+.navbar h1 {
+    color: white;
+    font-size: 24px;
 }
 
-/* Menu principal */
+/* Menu principal (desktop) */
 .nav-links {
     list-style: none;
     display: flex;
+    align-items: center;
 }
 
 .nav-links li {
@@ -41,9 +43,14 @@ body {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 16px;
 }
 
-/* Ícone do menu hambúrguer */
+.nav-links a:hover {
+    color: #25D366;
+}
+
+/* Ícone do menu hambúrguer (oculto no desktop) */
 .menu-hamburguer {
     display: none;
     font-size: 28px;
@@ -51,16 +58,11 @@ body {
     cursor: pointer;
 }
 
-/* Menu Mobile */
+/* Menu Mobile (oculto no desktop) */
 .nav-mobile {
     display: none;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-    background: #050f44;
-    flex-direction: column;
     list-style: none;
+    background: #050f44;
     text-align: center;
 }
 
@@ -74,18 +76,22 @@ body {
     font-size: 18px;
 }
 
-/* Tarja azul com ícones sociais no mobile */
+/* Ícones das mídias sociais */
 .social-bar {
-    display: none; /* Escondido no desktop, aparece no mobile */
+    display: flex;
+    justify-content: center;
     background: #050f44;
     padding: 10px 0;
-    text-align: center;
 }
 
 .social-bar a {
     margin: 0 10px;
     color: white;
     font-size: 22px;
+}
+
+.social-bar a:hover {
+    color: #25D366;
 }
 
 /* Seção Quem Somos */
@@ -95,11 +101,14 @@ body {
     justify-content: center;
     padding: 50px;
     flex-wrap: wrap;
+    background: #f9f9f9;
 }
 
-.sobre p {
-    text-align: justify;
-    color: black;
+.sobre .container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
 }
 
 .sobre img {
@@ -107,10 +116,33 @@ body {
     border-radius: 10px;
 }
 
+.sobre h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #050f44;
+}
+
+.sobre p {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.college-images img {
+    width: 60px;
+}
+
 /* Seção Eventos */
 .eventos {
-    padding: 30px;
+    padding: 50px 20px;
     background: #1a1a1a;
+    color: white;
+}
+
+.eventos h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
 }
 
 #eventos-lista {
@@ -127,27 +159,25 @@ body {
     width: 250px;
 }
 
+.evento h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.evento p {
+    font-size: 16px;
+}
+
 /* Rodapé */
 footer {
     padding: 20px;
     background: #050f44;
+    color: white;
 }
 
 footer img {
     width: 60px;
     margin-top: 10px;
-}
-
-/* Ícones sociais no rodapé (desktop) */
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.social-icons a {
-    font-size: 25px;
-    color: white;
 }
 
 /* Botão flutuante do WhatsApp */
@@ -170,7 +200,6 @@ footer img {
     text-decoration: none;
 }
 
-/* Efeito de "pulsação" suave para chamar atenção */
 .whatsapp-button:hover {
     transform: scale(1.1);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
@@ -201,45 +230,38 @@ footer img {
 /* ========================= */
 
 @media (max-width: 768px) {
+    /* Oculta o menu principal no mobile */
     .nav-links {
         display: none;
     }
 
+    /* Exibe o ícone do menu hambúrguer */
     .menu-hamburguer {
         display: block;
     }
 
+    /* Exibe o menu mobile quando ativo */
     .nav-mobile.show {
-        display: flex;
+        display: block;
     }
 
-    /* Exibir tarja azul com ícones sociais no mobile */
-    .social-bar {
-        display: flex;
-        justify-content: center;
-    }
-
-    .sobre {
+    /* Ajusta a seção Quem Somos para mobile */
+    .sobre .container {
         flex-direction: column;
         text-align: center;
-        padding: 20px;
     }
 
     .sobre img {
         width: 80%;
     }
 
+    /* Ajusta a largura dos eventos para mobile */
     .evento {
         width: 90%;
     }
 }
 
-
 @media (max-width: 480px) {
-    .navbar img {
-        height: 40px;
-    }
-
     .sobre img {
         width: 100%;
     }

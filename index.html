@@ -6,7 +6,6 @@
     <title>InfoSec-MT</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <script defer src="assets/scripts/main.js"></script>
-    
     <!-- Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
@@ -14,26 +13,27 @@
     <header>
         <nav class="navbar">
             <h1>InfoSec - MT</h1>
-            <!-- Ícone do menu hambúrguer -->
+            <!-- Menu principal -->
+            <ul class="nav-links">
+                <li><a href="#sobre">Quem Somos</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <!-- Ícone do menu hambúrguer (visível apenas no mobile) -->
             <div class="menu-hamburguer" onclick="toggleMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </nav>
-        <!-- Ícones das mídias sociais com tarja azul no mobile -->
+        <!-- Ícones das mídias sociais -->
         <div class="social-bar">
             <a href="https://github.com/infosec-mt" target="_blank"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.youtube.com/@infosecMT" target="_blank"><i class="fa-brands fa-youtube"></i></a>
             <a href="https://www.instagram.com/infosecMT" target="_blank"><i class="fa-brands fa-instagram"></i></a>
             <a href="https://www.tiktok.com/infosec.mt" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
         </div>
-        <ul class="nav-mobile">
-            <li><a href="#sobre">Quem Somos</a></li>
-            <li><a href="#eventos">Eventos</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
     </header>
 
-    <!-- Menu móvel -->
+    <!-- Menu móvel (visível apenas no mobile) -->
     <ul class="nav-mobile">
         <li><a href="#sobre">Quem Somos</a></li>
         <li><a href="#eventos">Eventos</a></li>
@@ -45,7 +45,25 @@
             <img src="assets/images/infosec.png" alt="InfoSec-MT Comunidade">
             <div>
                 <h2>Quem Somos?</h2>
-                <p>A InfoSec-MT é uma comunidade universitária focada em segurança da informação...</p>
+                <p>
+                    A InfoSec-MT é uma comunidade universitária que reúne estudantes de diversas 
+                    faculdades para explorar e compartilhar conhecimentos sobre cibersegurança.
+                    O espaço promove aprendizado, troca de experiências e colaboração em projetos, 
+                    preparando os participantes para os desafios do crescente mercado de segurança digital.
+                    Nosso foco está em promover o desenvolvimento e a capacitação de estudantes 
+                    na área de cibersegurança.
+                </p>
+                <br>
+                <h2>Nossos Representantes</h2>
+                <div class="college-images">
+                    <img src="assets/images/colleges/unic.png">
+                    <img src="assets/images/colleges/ifmt.png">
+                    <img src="assets/images/colleges/univag.png">
+                    <img src="assets/images/colleges/unemat.png">
+                    <img src="assets/images/colleges/invest.png">
+                    <img src="assets/images/colleges/fatec.png">
+                    <img src="assets/images/colleges/fasipe.png">
+                </div>
             </div>
         </div>
     </section>
@@ -63,6 +81,7 @@
         <img src="assets/images/eagleweb.png" alt="EagleWeb">
     </footer>
 
+    <!-- Botão flutuante do WhatsApp -->
     <a href="https://chat.whatsapp.com/HILfalYVeml0iiC9ZurXVn" target="_blank" class="whatsapp-button pulsar">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
