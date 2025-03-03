@@ -1,0 +1,224 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Corpo da página */
+body {
+    background-color: #fff;
+    color: white;
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #050f44;
+    position: relative;
+}
+
+.navbar img {
+    height: 50px;
+}
+
+/* Menu principal */
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Ícone do menu hambúrguer */
+.menu-hamburguer {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Menu Mobile */
+.nav-mobile {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: #050f44;
+    flex-direction: column;
+    list-style: none;
+    text-align: center;
+}
+
+.nav-mobile li {
+    padding: 15px;
+}
+
+.nav-mobile a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Tarja azul com ícones sociais no mobile */
+.social-bar {
+    display: none; /* Escondido no desktop, aparece no mobile */
+    background: #050f44;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.social-bar a {
+    margin: 0 10px;
+    color: white;
+    font-size: 22px;
+}
+
+/* Seção Quem Somos */
+.sobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+.sobre p {
+    text-align: justify;
+    color: black;
+}
+
+.sobre img {
+    width: 40%;
+    border-radius: 10px;
+}
+
+/* Seção Eventos */
+.eventos {
+    padding: 30px;
+    background: #1a1a1a;
+}
+
+#eventos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.evento {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+/* Rodapé */
+footer {
+    padding: 20px;
+    background: #050f44;
+}
+
+footer img {
+    width: 60px;
+    margin-top: 10px;
+}
+
+/* Ícones sociais no rodapé (desktop) */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    font-size: 25px;
+    color: white;
+}
+
+/* Botão flutuante do WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+}
+
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* ========================= */
+/* 📱 Responsividade 📱 */
+/* ========================= */
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-hamburguer {
+        display: block;
+    }
+
+    .nav-mobile.show {
+        display: flex;
+    }
+
+    /* Exibir tarja azul com ícones sociais no mobile */
+    .social-bar {
+        display: flex;
+        justify-content: center;
+    }
+
+    .sobre {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .sobre img {
+        width: 80%;
+    }
+
+    .evento {
+        width: 90%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .navbar img {
+        height: 40px;
+    }
+
+    .sobre img {
+        width: 100%;
+    }
+}
