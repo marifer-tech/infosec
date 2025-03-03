@@ -8,8 +8,8 @@
 
 /* Corpo da página */
 body {
-    background-color: #fff;
-    color: #333;
+    background-color: #ffffff; /* Fundo branco */
+    color: #000; /* Texto preto */
     text-align: center;
 }
 
@@ -19,12 +19,12 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background: #050f44;
+    background: #050f44; /* Fundo azul escuro */
     position: relative;
 }
 
 .navbar h1 {
-    color: white;
+    color: rgb(255, 255, 255); /* Texto branco */
     font-size: 24px;
 }
 
@@ -40,14 +40,14 @@ body {
 }
 
 .nav-links a {
-    color: white;
+    color: rgb(255, 255, 255); /* Texto branco */
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
 }
 
 .nav-links a:hover {
-    color: #25D366;
+    color: #25D366; /* Verde ao passar o mouse */
 }
 
 /* Ícone do menu hambúrguer (oculto no desktop) */
@@ -62,7 +62,7 @@ body {
 .nav-mobile {
     display: none;
     list-style: none;
-    background: #050f44;
+    background: #050f44; /* Fundo azul escuro */
     text-align: center;
 }
 
@@ -71,7 +71,7 @@ body {
 }
 
 .nav-mobile a {
-    color: white;
+    color: rgb(255, 255, 255); /* Texto branco */
     text-decoration: none;
     font-size: 18px;
 }
@@ -80,7 +80,7 @@ body {
 .social-bar {
     display: flex;
     justify-content: center;
-    background: #050f44;
+    background: #050f44; /* Fundo azul escuro */
     padding: 10px 0;
 }
 
@@ -91,7 +91,38 @@ body {
 }
 
 .social-bar a:hover {
-    color: #25D366;
+    color: #25D366; /* Verde ao passar o mouse */
+}
+
+/* Faixa destacada */
+.faixa-destaque {
+    background: #25D366; /* Fundo verde */
+    color: #050f44; /* Texto azul escuro */
+    text-align: center;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa a faixa */
+    white-space: nowrap; /* Impede a quebra de linha */
+    position: relative;
+}
+
+.faixa-destaque p {
+    margin: 0;
+    display: inline-block;
+    padding-left: 100%; /* Começa o texto fora da tela, à direita */
+    animation: moverFaixa 10s linear infinite; /* Animação contínua */
+}
+
+/* Animação da faixa */
+@keyframes moverFaixa {
+    0% {
+        transform: translateX(100%); /* Começa à direita */
+    }
+    100% {
+        transform: translateX(-100%); /* Move para a esquerda */
+    }
 }
 
 /* Seção Quem Somos */
@@ -101,7 +132,7 @@ body {
     justify-content: center;
     padding: 50px;
     flex-wrap: wrap;
-    background: #f9f9f9;
+    background: #ffffff; /* Fundo branco */
 }
 
 .sobre .container {
@@ -119,25 +150,25 @@ body {
 .sobre h2 {
     font-size: 28px;
     margin-bottom: 20px;
-    color: #050f44;
+    color: #050f44; /* Texto azul escuro */
 }
 
 .sobre p {
     text-align: justify;
     font-size: 16px;
     line-height: 1.6;
-    color: #333;
+    color: #000; /* Texto preto */
 }
 
 .college-images img {
-    width: 60px;
+    width: 90px; /* Tamanho padrão para desktop */
 }
 
 /* Seção Eventos */
 .eventos {
     padding: 50px 20px;
-    background: #1a1a1a;
-    color: white;
+    background: #1a1a1a; /* Fundo preto */
+    color: white; /* Texto branco */
 }
 
 .eventos h2 {
@@ -153,7 +184,7 @@ body {
 }
 
 .evento {
-    background: #222;
+    background: #222; /* Fundo cinza escuro */
     padding: 20px;
     border-radius: 10px;
     width: 250px;
@@ -171,8 +202,8 @@ body {
 /* Rodapé */
 footer {
     padding: 20px;
-    background: #050f44;
-    color: white;
+    background: #050f44; /* Fundo azul escuro */
+    color: white; /* Texto branco */
 }
 
 footer img {
@@ -185,8 +216,8 @@ footer img {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #25D366;
-    color: white;
+    background: #25D366; /* Fundo verde */
+    color: white; /* Texto branco */
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -259,10 +290,20 @@ footer img {
     .evento {
         width: 90%;
     }
+
+    /* Ajusta o tamanho dos ícones das faculdades no mobile */
+    .college-images img {
+        width: 40px; /* Tamanho menor para mobile */
+    }
 }
 
 @media (max-width: 480px) {
     .sobre img {
         width: 100%;
+    }
+
+    /* Ajusta o tamanho dos ícones das faculdades para telas muito pequenas */
+    .college-images img {
+        width: 160px; /* Tamanho ainda menor */
     }
 }
